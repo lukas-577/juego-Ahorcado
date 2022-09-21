@@ -44,6 +44,9 @@ function iniciarJuego(){
         dibujarBase();
         dibujarCuerpo();
         apareceCanvas();
+        envuelveLeeTeclado();
+        apareceBotonesJuego();
+        aparecePalabraSecreta();
 
     }else{
         console.log("ingrese palabra mayuscula ");
@@ -57,43 +60,43 @@ function creaPalabra(){
         lista.push(texto);
         console.log(palabraSecreta);
         iniciarJuego();
+        desapareceApareceLlenarTexto();
     }else{
         alertaErrorSoloLetras();
     }
 }
 
-function desapareceBtnIniciales(){
-    document.getElementById('desaparece-botones').style.display= 'none';
-}
+function envuelveLeeTeclado(){
+    //window toma lo que escriba :O
+    window.onkeydown = function leeTeclado(event) {
+        document.addEventListener
+        var codigo = event.which || event.keyCode;
 
-//window toma lo que escriba :O
-window.onkeydown = function leeTeclado(event) {
-    document.addEventListener
-    var codigo = event.which || event.keyCode;
+        console.log("Presionada: " + codigo);
+        
+        // if(codigo === 13){
+        //   console.log("Tecla ENTER");
+        // }
 
-    console.log("Presionada: " + codigo);
-     
-    // if(codigo === 13){
-    //   console.log("Tecla ENTER");
-    // }
-
-    if(codigo >= 65 && codigo <= 90 || codigo === 8,16){
-      letraTeclado = String.fromCharCode(codigo);
-      console.log(String.fromCharCode(codigo));
-      comparaPalabraSecretaConTeclado();
-      dibujaTexto();
-      //comprubaSeExiste();
+        if(codigo >= 65 && codigo <= 90 || codigo === 8,16){
+        letraTeclado = String.fromCharCode(codigo);
+        console.log(String.fromCharCode(codigo));
+        comparaPalabraSecretaConTeclado();
+        dibujaTexto();
+        //comprubaSeExiste();
+        }
+        else{
+            alertaErrorSoloLetras();
+        }   
+        comprubaSeExiste();
+        compruebaSiPerdio();
+        //compruebaSiGano();
+        //ver donde poner esta funcion 
+        muestraNumeroIntentosErraos();
+        
+        
     }
-    else{
-        alertaErrorSoloLetras();
-    }   
-    comprubaSeExiste();
-    compruebaSiPerdio();
-    compruebaSiGano();
-    //ver donde poner esta funcion 
-    muestraNumeroIntentosErraos();
-    
-     
+
 }
 
 function comparaPalabraSecretaConTeclado(){
@@ -164,9 +167,10 @@ function muestraNumeroIntentosErraos(){
     numero.innerHTML = contadorErrado;
 }
 
-function escondeElementos(){
-    document.getElementById('desaparece-botones').style.display = 'none';
+function desapareceBtnIniciales(){
+    document.getElementById('desaparece-botones').style.display= 'none';
 }
+
 function apareceElementos(){
     document.getElementById('aparece-llenar-texto').style.display = 'block';
 }
@@ -177,6 +181,14 @@ function apareceCanvas(){
 function aparecePalabraSecreta(){
     document.getElementById('palabraSecretauno').style.display = 'block';
     document.getElementById('palabraSecretados').style.display = 'block';
+}
+
+function desapareceApareceLlenarTexto(){
+    document.getElementById('aparece-llenar-texto').style.display = 'none';
+}
+
+function apareceBotonesJuego(){
+    document.getElementById('botones-juego').style.display = 'block';
 }
 
 function reload(){

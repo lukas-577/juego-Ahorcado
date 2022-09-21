@@ -3,7 +3,7 @@ function dibujarCanvas(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#E5E5E5";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
     tablero.fillRect(0,0,1200,860);
     tablero.beginPath();
@@ -20,7 +20,7 @@ function dibujarBase(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
     
     //base
     //nos permite poner un puntos en cordenadas (x,y)
@@ -36,7 +36,7 @@ function tablaArriba(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
     
 
     //tabla arriba
@@ -54,7 +54,7 @@ function cuerda(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
     
 
     //cuerda
@@ -71,7 +71,7 @@ function cabeza(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
     
     //cabeza
     tablero.beginPath();
@@ -86,7 +86,7 @@ function paloDiagonal(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
 
     //palo diagonal
@@ -104,7 +104,7 @@ function torzo(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
     //torzo
     tablero.beginPath();
@@ -121,7 +121,7 @@ function brazoDerecho(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
     //brazo derecho
     tablero.beginPath();
@@ -138,7 +138,7 @@ function brazoIzquierdo(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
     //brazo izquierdo
     tablero.beginPath();
@@ -155,7 +155,7 @@ function piernaDerecha(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
 
 
@@ -174,7 +174,7 @@ function piernaIzquierda(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
 
 
@@ -233,7 +233,7 @@ function dibujarLineas(){
     tablero.lineCap= "round";
     tablero.lineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
-    tablero.strokeStyle = "#8A3871";
+    tablero.strokeStyle = "#0A3871";
 
 
     let anchura = 600/palabraSecreta.length;
@@ -247,7 +247,7 @@ function dibujarLineas(){
 
 function dibujaTexto(){
 
-    tablero.fillStyle = "green";
+    tablero.fillStyle = "#0A3871";
     tablero.font = "30px Georgia";
     let anchura = 600/palabraSecreta.length;
     for(var i =0; i< palabraSecreta.length;i++){
@@ -265,7 +265,7 @@ function dibujaTexto(){
 }
 
 function dibujaLetraErrada(){
-    tablero.fillStyle = "green";
+    tablero.fillStyle = "#0A3871";
     tablero.font = "30px Georgia";
     tablero.fillText(letraErrada,700+espaciadoErrado,800);
     tablero.fill()
