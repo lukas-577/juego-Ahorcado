@@ -204,3 +204,15 @@ function apareceBotonesJuego(){
 function reload(){
     window.location.reload();
 }
+
+
+// input escondido para moviles 
+var lector = document.getElementById('input-escondido');
+lector.addEventListener("input", lectorInput());
+
+function lectorInput(){
+    setTimeout(() => {
+        lector.value="";
+     }, "150");
+    comparaPalabraSecretaConTeclado();
+}
