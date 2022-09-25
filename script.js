@@ -47,6 +47,15 @@ function iniciarJuego(){
         envuelveLeeTeclado();
         apareceBotonesJuego();
         aparecePalabraSecreta();
+        //resetea valores
+        //palabraSecreta = "";
+        letraTeclado = "";
+        letraAcertada=[''];
+        letraErradaIndice=[''];
+        letraErrada = [];
+        letraIngresada=[''];
+        espaciadoErrado = 0;
+        contadorErrado = 0;
 
     }else{
         console.log("ingrese palabra mayuscula ");
@@ -90,7 +99,7 @@ function envuelveLeeTeclado(){
         }   
         comprubaSeExiste();
         compruebaSiPerdio();
-        //compruebaSiGano();
+        compruebaSiGano();
         //ver donde poner esta funcion 
         muestraNumeroIntentosErraos();
         
@@ -111,13 +120,14 @@ function comparaPalabraSecretaConTeclado(){
             console.log('no contiene la letra');
             //usamos el indexOf que devuelve el indice de la letra
             //donde se encuentra pero si no esta devuelve -1
-            letraErradaIndice=palabraSecreta.indexOf(letraTeclado);           
+            letraErradaIndice=palabraSecreta.indexOf(letraTeclado); 
             
         }
         
     }
 }
 
+//comprube si existe la letra en la palabra
 function comprubaSeExiste(){
     if(letraErradaIndice===-1){
         console.log('no existe la letra en la palabra');
@@ -152,7 +162,7 @@ function compruebaSiGano(){
 }
 
 function alertaErrorSoloLetras (){
-    swal("Error!", "Solo letras!", "warning");
+    swal("Error!", "Solo letras y mayusculas!", "warning");
     
 }
 
