@@ -214,5 +214,5 @@ function lectorInput(){
     setTimeout(() => {
         lector.value="";
      }, "150");
-    comparaPalabraSecretaConTeclado();
+    envuelveLeeTeclado();
 }
