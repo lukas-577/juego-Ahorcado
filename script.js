@@ -208,11 +208,11 @@ function reload(){
 
 // input escondido para moviles 
 var lector = document.getElementById('input-escondido');
-lector.addEventListener("input", lectorInput());
+lector.addEventListener("input", lectorInput);
 
 function lectorInput(){
     setTimeout(() => {
         lector.value="";
      }, "150");
-    envuelveLeeTeclado();
+    envuelveLeeTeclado(),console.log("pasa por aqui xD");
 }
